@@ -1,41 +1,38 @@
-# Universal Liquid Glass Visual Skill
+# Liquid Glass Visual Skill
 
-A **public, reusable AI skill** for designing and validating interfaces inspired by Apple's Liquid Glass visual language. **Not tied to any application, repository, programming language, or UI toolkit.**
+**Reusable AI skill for high-fidelity glass UI design and implementation.** Works with any codebase, language, or framework, including C++. Built for Claude and other agents that read `SKILL.md`.
 
-It helps AI coding agents (including Claude Code) inspect an existing project, choose appropriate capabilities, and reproduce observable *glass-like* behavior while preserving readability, motion accessibility, performance, and existing functionality.
+This is a **visual target + adaptive rendering + QA skill**, not a theme preset, CSS snippet, or copy of Apple's private renderer. It specifies how an interface must *look and behave*, then helps the agent choose suitable tools for the actual project.
 
-> Independent community project. Not affiliated with, endorsed by, or a replacement for Apple's proprietary Liquid Glass implementation. Pixel-perfect parity cannot be guaranteed across different engines and platforms.
+## Use
 
-## Install / Use
+1. Open [SKILL.md](liquid-glass-visual-skill/SKILL.md). Give Claude this URL or install the entire `liquid-glass-visual-skill/` folder as a skill.
+2. Ask: **"Use the Liquid Glass Visual Skill in this repository to add adaptive glass UI to my project. Inspect my stack first. Follow its visual, performance, safety, and test gates. Show evidence, not just code."**
+3. For a C++ project, the agent reads [C++ guide](liquid-glass-visual-skill/references/CPP.md) and may reuse the standalone [contrast helper](liquid-glass-visual-skill/tools/contrast.hpp), after reviewing compatibility.
 
-For Claude or a skill-aware coding agent, point it to:
+## Structure
 
-`liquid-glass-visual-skill/SKILL.md`
+| File | Loaded when | Purpose |
+| --- | --- | --- |
+| [SKILL.md](liquid-glass-visual-skill/SKILL.md) | Skill activation | Short core contract and routing |
+| [DESIGN.md](liquid-glass-visual-skill/references/DESIGN.md) | All glass UI tasks | Detailed visual and motion criteria |
+| [TESTS.md](liquid-glass-visual-skill/references/TESTS.md) | Implementation / review | Evidence-based pass/fail checks |
+| [CPP.md](liquid-glass-visual-skill/references/CPP.md) | C++ project only | API/tool selection and rendering strategy |
+| [contrast.hpp](liquid-glass-visual-skill/tools/contrast.hpp) | Optional C++ contrast logic | Dependency-free reference math |
+| [SECURITY.md](liquid-glass-visual-skill/references/SECURITY.md) | Working in any repo | Untrusted-input and change safety |
+| [SOURCES.md](liquid-glass-visual-skill/references/SOURCES.md) | Fact checking | Official Apple, W3C and framework docs |
 
-Read all linked references before implementing. Or copy the entire `liquid-glass-visual-skill` folder into the agent's skills directory, following the agent's own documentation.
+**Token-aware design:** short metadata and entrypoint; detailed references are read only when relevant. Plain English, no repeated boilerplate or hidden install scripts.
 
-**Generic prompt:**
+## Non-negotiable outcome
 
-> Use the `liquid-glass-visual-skill` skill from this repository to implement or improve Liquid Glass styling in my project. Inspect the actual codebase, platform, UI toolkit, graphics capabilities, and performance constraints first. Follow the observable design and acceptance criteria. Select techniques appropriate to my project instead of assuming an architecture. If the project uses C++, consult `references/CPP_GUIDE.md`. Preserve existing behavior, validate legibility on changing backgrounds, and report evidence and limitations.
+The glass surface must adapt to the **visible backdrop**, preserve readable text/icons across mixed backgrounds and motion, show subtle optical depth, respond fluidly to interaction, and fall back cleanly when effects are unavailable. Blur + opacity alone is **not** sufficient. Never claim exact parity with Apple's proprietary implementation without proof.
 
-## Contents
+## Trust and license
 
-- [SKILL.md](liquid-glass-visual-skill/SKILL.md): activation, observable acceptance contract, AI workflow.
-- [Visual charter](liquid-glass-visual-skill/references/CHARTE_VISUELLE.md): perceptual and functional appearance criteria.
-- [Validation matrix](liquid-glass-visual-skill/references/VALIDATION_VISUELLE.md): test scenes and evidence checklist.
-- [C++ guide](liquid-glass-visual-skill/references/CPP_GUIDE.md): optional decision tree and techniques for C++ UI/graphics stacks.
-- [Sources](liquid-glass-visual-skill/references/SOURCES.md): primary Apple and accessibility references, limitations.
+- No download/install/execute hooks, remote scripts, tokens, or credentials.
+- Nothing is run by merely reading the skill.
+- Included C++ helper is optional, local and dependency-free. Review before production use.
+- MIT licensed; not affiliated with or endorsed by Apple. Apple trademarks remain theirs.
 
-## Principles
-
-- Glass mainly for controls, navigation, and top-layer UI, **not** every content surface.
-- **Regular** adaptive glass by default; **Clear** only where legibility can be secured.
-- Dynamic local contrast without flicker or sudden oscillation.
-- Subtle boundary highlights, dimensionality, context-aware obscuration and motion.
-- No unnecessary multiple layers of glass; no overdone glow.
-- Respect reduced transparency, reduced motion, and increased contrast settings.
-- Verify realistic backgrounds and motion, not only a static screenshot.
-
-## License
-
-MIT. See [LICENSE](LICENSE). Apple trademarks and artwork remain the property of their respective owners. No Apple assets or proprietary implementations are bundled.
+See [LICENSE](LICENSE).
