@@ -51,4 +51,5 @@ Considérer la tâche **inachevée** si un texte devient illisible, si des surfa
 
 - `references/CHARTE_VISUELLE.md` : critères précis d'apparence et de comportement.
 - `references/VALIDATION_VISUELLE.md` : protocole d'acceptation.
+- `references/CPP_GUIDE.md` : boîte à outils optionnelle pour C++ (Qt, JUCE, GPU natif, etc.), sans imposer de framework.
 - `references/SOURCES.md` : sources publiques officielles et distinctions entre recommandations Apple et exigences du skill.
