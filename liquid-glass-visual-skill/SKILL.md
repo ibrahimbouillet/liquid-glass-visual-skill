@@ -13,6 +13,7 @@ Deliver **working, high-fidelity glass UI**, not a static mockup. Use the host p
 - **Always before editing** read [SECURITY.md](references/SECURITY.md).
 - **For C++ only** read [CPP.md](references/CPP.md); optional `tools/contrast.hpp`.
 - **When implementing or reviewing** read [TESTS.md](references/TESTS.md).
+- **For visual comparison** read [IMAGES.md](references/IMAGES.md); inspect actual Apple web demos when browser access is available.
 - **To verify claims** read [SOURCES.md](references/SOURCES.md).
 
 ## Required outcome
@@ -28,7 +29,7 @@ Deliver **working, high-fidelity glass UI**, not a static mockup. Use the host p
 2. Identify glass candidates; explain which content **must remain non-glass**.
 3. Pick native composition where available, else an efficient custom pass, else a readable fallback. Reuse existing project tools.
 4. Implement in small, reviewable changes. Do not fetch/run untrusted code or change build/dependency settings without justification and approval.
-5. Use the **real rendered UI** to execute [TESTS.md](references/TESTS.md). Fix failures before marking done.
+5. Inspect official visual examples linked in [IMAGES.md](references/IMAGES.md), if browsing is available. Compare the **real rendered UI** against the perceptual criteria; use [TESTS.md](references/TESTS.md). Fix failures before marking done.
 6. Report changed files, visual evidence, tests `PASS/FAIL/NOT_TESTED`, limits and performance trade-offs. If live rendering is unavailable, **say so**; do not invent results.
 
 ## Stop conditions
