@@ -1,61 +1,41 @@
-# Liquid Glass Visual Skill
+# Universal Liquid Glass Visual Skill
 
-**Skill public et indépendant pour Claude / Claude Code**, basé sur l'étude des principes Liquid Glass présentés publiquement par Apple. Il décrit des **résultats visuels observables** et des tests d'acceptation ; il **ne prescrit aucune technologie**, aucun framework et aucune architecture d'application.
+A **public, reusable AI skill** for designing and validating interfaces inspired by Apple's Liquid Glass visual language. **Not tied to any application, repository, programming language, or UI toolkit.**
 
-Version initiale : 1.0.0 (8 novembre 2026). Langue : français.
+It helps AI coding agents (including Claude Code) inspect an existing project, choose appropriate capabilities, and reproduce observable *glass-like* behavior while preserving readability, motion accessibility, performance, and existing functionality.
 
-## Contenu
+> Independent community project. Not affiliated with, endorsed by, or a replacement for Apple's proprietary Liquid Glass implementation. Pixel-perfect parity cannot be guaranteed across different engines and platforms.
 
-```text
-liquid-glass-visual-skill/
-  SKILL.md
-  references/
-    CHARTE_VISUELLE.md
-    VALIDATION_VISUELLE.md
-    SOURCES.md
-PROMPT_ATHERSHELL_ALPHA4.md
-README.md
-LICENSE
-```
+## Install / Use
 
-Ce dépôt est **séparé du code d'AtherShell**. L'application AtherShell n'est pas incluse et ne doit jamais être ajoutée à ce dépôt.
+For Claude or a skill-aware coding agent, point it to:
 
-## Objectif
+`liquid-glass-visual-skill/SKILL.md`
 
-- Translucidité, relief, reflets fins, effets de bord et couche d'interaction flottante.
-- Adaptation du contraste réel au fond, lisibilité des textes et des icônes.
-- Défilement et menus fluides ; variations de taille et d'état cohérentes.
-- Usage modéré du verre et rejet des surfaces vitrées superposées.
-- Respect de la transparence réduite, du contraste augmenté et du mouvement réduit.
-- Validation observable sur des scènes difficiles, sans revendication de copie exacte du moteur Apple.
+Read all linked references before implementing. Or copy the entire `liquid-glass-visual-skill` folder into the agent's skills directory, following the agent's own documentation.
 
-## Installer dans Claude (interface web)
+**Generic prompt:**
 
-1. Télécharger l'archive `liquid-glass-visual-skill-claude.zip` fournie avec la distribution (ou fabriquer un ZIP contenant **le dossier** `liquid-glass-visual-skill/` comme racine).
-2. Dans Claude : **Personnaliser > Compétences > + > Créer une compétence > Télécharger une compétence**.
-3. Importer le ZIP, activer la compétence et formuler une demande qui mentionne `liquid-glass-visual-skill`.
+> Use the `liquid-glass-visual-skill` skill from this repository to implement or improve Liquid Glass styling in my project. Inspect the actual codebase, platform, UI toolkit, graphics capabilities, and performance constraints first. Follow the observable design and acceptance criteria. Select techniques appropriate to my project instead of assuming an architecture. If the project uses C++, consult `references/CPP_GUIDE.md`. Preserve existing behavior, validate legibility on changing backgrounds, and report evidence and limitations.
 
-## Installer dans Claude Code
+## Contents
 
-Copier **uniquement** le dossier `liquid-glass-visual-skill/` dans :
+- [SKILL.md](liquid-glass-visual-skill/SKILL.md): activation, observable acceptance contract, AI workflow.
+- [Visual charter](liquid-glass-visual-skill/references/CHARTE_VISUELLE.md): perceptual and functional appearance criteria.
+- [Validation matrix](liquid-glass-visual-skill/references/VALIDATION_VISUELLE.md): test scenes and evidence checklist.
+- [C++ guide](liquid-glass-visual-skill/references/CPP_GUIDE.md): optional decision tree and techniques for C++ UI/graphics stacks.
+- [Sources](liquid-glass-visual-skill/references/SOURCES.md): primary Apple and accessibility references, limitations.
 
-- `~/.claude/skills/liquid-glass-visual-skill/` pour un usage utilisateur global, ou
-- `.claude/skills/liquid-glass-visual-skill/` dans un projet **si vous choisissez délibérément de l'inclure dans ce projet**.
+## Principles
 
-Pour garder le dépôt de l'application intact, privilégiez l'installation utilisateur globale. Vous pourrez alors invoquer `/liquid-glass-visual-skill` ou demander explicitement à Claude de l'appliquer. Les versions et interfaces de Claude évoluent ; voir les ressources Anthropic dans `SOURCES.md`.
+- Glass mainly for controls, navigation, and top-layer UI, **not** every content surface.
+- **Regular** adaptive glass by default; **Clear** only where legibility can be secured.
+- Dynamic local contrast without flicker or sudden oscillation.
+- Subtle boundary highlights, dimensionality, context-aware obscuration and motion.
+- No unnecessary multiple layers of glass; no overdone glow.
+- Respect reduced transparency, reduced motion, and increased contrast settings.
+- Verify realistic backgrounds and motion, not only a static screenshot.
 
-## Application à AtherShell Alpha 4
+## License
 
-Le fichier `PROMPT_ATHERSHELL_ALPHA4.md` propose une demande prête à coller. Elle demande à Claude de découvrir **l'architecture réelle du projet** avant d'intervenir, de préserver le thème Grain et de travailler uniquement le thème Liquid.
-
-## Critères et limites
-
-Les comportements de Liquid Glass décrits par Apple sont une **référence de design**. Aucun moteur, shader, source Apple ou image Apple n'est distribué ici. Les seuils WCAG 2.2 AA font partie de nos exigences de qualité, sans être attribués à Apple.
-
-## Publication indépendante sur GitHub
-
-Créer un **nouveau dépôt PUBLIC** nommé par exemple `liquid-glass-visual-skill` dans le bon compte GitHub. Ne pas sélectionner le dépôt AtherShell. Extraire l'archive **GitHub** puis téléverser le contenu extrait (`README.md`, `LICENSE`, `PROMPT_ATHERSHELL_ALPHA4.md`, et le dossier du skill). Un ZIP téléversé sans extraction resterait un simple fichier ZIP.
-
-## Licence
-
-MIT pour les fichiers originaux de ce projet. Apple et Liquid Glass sont des marques ou désignations appartenant à leurs titulaires respectifs. Ce dépôt n'est ni affilié ni approuvé par Apple.
+MIT. See [LICENSE](LICENSE). Apple trademarks and artwork remain the property of their respective owners. No Apple assets or proprietary implementations are bundled.
