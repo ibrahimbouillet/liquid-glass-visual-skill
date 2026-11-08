@@ -20,9 +20,21 @@ This is a **visual target + adaptive rendering + QA skill**, not a theme preset,
 | [CPP.md](liquid-glass-visual-skill/references/CPP.md) | C++ project only | API/tool selection and rendering strategy |
 | [contrast.hpp](liquid-glass-visual-skill/tools/contrast.hpp) | Optional C++ contrast logic | Dependency-free reference math |
 | [SECURITY.md](liquid-glass-visual-skill/references/SECURITY.md) | Working in any repo | Untrusted-input and change safety |
+| [IMAGES.md](liquid-glass-visual-skill/references/IMAGES.md) | Visual reference work | Apple examples, licenses, original scenes |
 | [SOURCES.md](liquid-glass-visual-skill/references/SOURCES.md) | Fact checking | Official Apple, W3C and framework docs |
+| [contrast_test.cpp](liquid-glass-visual-skill/tests/contrast_test.cpp) | Optional C++ verification | Tiny unit test for the helper |
 
 **Token-aware design:** short metadata and entrypoint; detailed references are read only when relevant. Plain English, no repeated boilerplate or hidden install scripts.
+
+## Visual references
+
+![Original Light Glass test scene](liquid-glass-visual-skill/assets/light.svg)
+
+![Original Dark Glass test scene](liquid-glass-visual-skill/assets/dark.svg)
+
+![Original Mixed-Tone Glass test scene](liquid-glass-visual-skill/assets/mixed.svg)
+
+These are **original, reusable visual test scenes**, not Apple screenshots. For authentic visual and motion study, open [Apple's official Liquid Glass overview](https://developer.apple.com/documentation/technologyoverviews/liquid-glass), [Materials guidelines](https://developer.apple.com/design/human-interface-guidelines/materials), and [WWDC demo](https://developer.apple.com/videos/play/wwdc2025/219/). The [image study guide](liquid-glass-visual-skill/references/IMAGES.md) includes a CC0 community reference and explicit comparison steps.
 
 ## Non-negotiable outcome
 
