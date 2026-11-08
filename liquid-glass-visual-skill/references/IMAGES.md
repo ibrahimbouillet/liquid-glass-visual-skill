@@ -35,7 +35,11 @@ Open these **official pages in a browser** when browsing is supported. Analyze t
 
 ## Open-licensed community visual examples
 
-- [CC0 app icon comparison (Wikimedia Commons)](https://commons.wikimedia.org/wiki/File:Liquid_Glass_app_icon_comparison_between_versions_26_and_26.png) — by Gleepgs, icon lighting study, not a screenshot of all controls. The uploader's CC0 grant does not erase any independent Apple trademark or design rights.
+**CC0 community comparison (externally hosted preview):**
+
+![Community icon-lighting comparison by Gleepgs, CC0](https://commons.wikimedia.org/wiki/Special:FilePath/Liquid_Glass_app_icon_comparison_between_versions_26_and_26.png)
+
+[Source and license: Wikimedia Commons, by Gleepgs, CC0](https://commons.wikimedia.org/wiki/File:Liquid_Glass_app_icon_comparison_between_versions_26_and_26.png). This studies icon lighting, not the full system controls. The uploader's CC0 grant does not erase independent Apple trademark or design rights.
 - [CC BY 4.0 3D app icon comparison](https://commons.wikimedia.org/wiki/File:Liquid_Glass_-_3D_effect_for_icons_2025-2026.png) — by LucaLindholm; attribution required. Kept as a link rather than copied.
 
 ## Required agent workflow
