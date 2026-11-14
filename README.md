@@ -48,3 +48,5 @@ The glass surface must adapt to the **visible backdrop**, preserve readable text
 - MIT licensed; not affiliated with or endorsed by Apple. Apple trademarks remain theirs.
 
 See [LICENSE](LICENSE).
+
+by [Ibrahim bouillet](https://github.com/ibrahimbouillet)
